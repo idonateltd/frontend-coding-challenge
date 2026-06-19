@@ -1,0 +1,6 @@
+{
+  "extends": "@frontend-coding-challenge/config/tsconfig.base.json",
+  "compilerOptions": {
+    "strictNullChecks": true
+  }
+}
