@@ -8,11 +8,8 @@
   "files": {
     "ignoreUnknown": false,
     "includes": [
-      "**",
       "!**/.next",
       "!**/dist",
-      "!**/.turbo",
-      "!**/.nx",
       "!**/dev-dist",
       "!**/.zed",
       "!**/.vscode",
@@ -50,10 +47,7 @@
       "nursery": {
         "useSortedClasses": {
           "level": "warn",
-          "fix": "safe",
-          "options": {
-            "functions": ["clsx", "cva", "cn"]
-          }
+          "fix": "safe"
         }
       },
       "style": {

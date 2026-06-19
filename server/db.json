@@ -1,0 +1,199 @@
+{
+  "categories": [
+    {
+      "id": "engineering",
+      "label": "Engineering",
+      "description": "Technical guides, runbooks, architecture notes, and implementation references."
+    },
+    {
+      "id": "product",
+      "label": "Product",
+      "description": "Launch plans, product decisions, customer insights, and research summaries."
+    },
+    {
+      "id": "security",
+      "label": "Security",
+      "description": "Policies, checklists, incident preparation, and access control guidance."
+    },
+    {
+      "id": "people",
+      "label": "People",
+      "description": "Team rituals, onboarding notes, interviewing resources, and workplace policies."
+    },
+    {
+      "id": "operations",
+      "label": "Operations",
+      "description": "Planning notes, vendor processes, business operations, and internal workflows."
+    }
+  ],
+  "documents": [
+    {
+      "id": "1",
+      "title": "Incident Response Runbook",
+      "summary": "Step-by-step response process for production incidents, escalation, and follow-up.",
+      "content": "Use this runbook when a production incident affects customers or critical internal workflows. Start by assigning an incident lead, creating a shared timeline, and confirming the customer impact. Keep updates short, timestamped, and tied to observable facts. After mitigation, schedule a review that captures root cause, follow-up tasks, and owner assignments.",
+      "type": "runbook",
+      "category": "engineering",
+      "status": "verified",
+      "owner": "Platform Team",
+      "tags": ["incident-response", "on-call", "reliability"],
+      "updatedAt": "2026-06-10T14:20:00.000Z",
+      "readTimeMinutes": 8,
+      "isFavorite": true
+    },
+    {
+      "id": "2",
+      "title": "API Pagination Guidelines",
+      "summary": "Recommended patterns for paginated endpoints, cursor naming, and empty result handling.",
+      "content": "Prefer cursor pagination for mutable datasets and offset pagination for stable administrative lists. Use explicit query parameter names, return pagination metadata with each response, and keep empty results as successful responses. Avoid overloading page state with filtering state because it makes cache keys and browser history harder to reason about.",
+      "type": "guide",
+      "category": "engineering",
+      "status": "verified",
+      "owner": "API Working Group",
+      "tags": ["api", "pagination", "backend"],
+      "updatedAt": "2026-05-28T09:45:00.000Z",
+      "readTimeMinutes": 6,
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "title": "Data Retention Policy",
+      "summary": "Retention windows and deletion expectations for user data, logs, and exports.",
+      "content": "Customer data must be retained only for the period required by the product, legal obligations, and support workflows. Logs that include personal data require shorter retention and stricter access controls. Export files should expire automatically and must not be used as long-term storage. Teams are responsible for documenting exceptions before launch.",
+      "type": "policy",
+      "category": "security",
+      "status": "verified",
+      "owner": "Security Team",
+      "tags": ["privacy", "compliance", "data"],
+      "updatedAt": "2026-06-02T16:05:00.000Z",
+      "readTimeMinutes": 10,
+      "isFavorite": true
+    },
+    {
+      "id": "4",
+      "title": "OAuth App Review Checklist",
+      "summary": "Checklist for reviewing OAuth apps before they are approved for internal use.",
+      "content": "Before approving an OAuth app, confirm the requested scopes, data access, vendor owner, and business justification. Apps that request write access or broad organization access require a second reviewer. Document the approval date and schedule a periodic review so stale access does not remain active indefinitely.",
+      "type": "reference",
+      "category": "security",
+      "status": "needs-review",
+      "owner": "Security Operations",
+      "tags": ["oauth", "access-control", "vendors"],
+      "updatedAt": "2026-04-18T11:30:00.000Z",
+      "readTimeMinutes": 5,
+      "isFavorite": false
+    },
+    {
+      "id": "5",
+      "title": "Product Launch Readiness",
+      "summary": "Launch checklist covering release notes, support handoff, analytics, and rollback planning.",
+      "content": "A launch is ready when the team can explain what is changing, who is affected, how success will be measured, and how to roll back. Include support notes, analytics events, feature flag state, and owner coverage. Launches with customer-visible risk should have a same-day monitoring plan and a clear communication channel.",
+      "type": "guide",
+      "category": "product",
+      "status": "verified",
+      "owner": "Product Operations",
+      "tags": ["launch", "release", "analytics"],
+      "updatedAt": "2026-06-12T13:10:00.000Z",
+      "readTimeMinutes": 7,
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "title": "Customer Feedback Taxonomy",
+      "summary": "Shared labels for classifying customer feedback across support, research, and product.",
+      "content": "Use the taxonomy to group feedback by user intent, product area, severity, and stage of the journey. Keep labels stable enough for reporting, but review them when teams start creating duplicate categories. Feedback should preserve the customer's words and include a short interpretation from the person triaging it.",
+      "type": "decision",
+      "category": "product",
+      "status": "needs-review",
+      "owner": "Research Team",
+      "tags": ["feedback", "research", "taxonomy"],
+      "updatedAt": "2026-03-22T18:40:00.000Z",
+      "readTimeMinutes": 9,
+      "isFavorite": true
+    },
+    {
+      "id": "7",
+      "title": "Interview Loop Notes",
+      "summary": "Internal guidance for structuring interviews, scoring candidates, and writing feedback.",
+      "content": "Interview loops should evaluate the skills required for the role without turning the process into trivia. Each interviewer owns a clear signal area and writes evidence-based feedback. Avoid vague impressions, compare decisions against the rubric, and call out uncertainty when the evidence is incomplete.",
+      "type": "reference",
+      "category": "people",
+      "status": "verified",
+      "owner": "Hiring Team",
+      "tags": ["hiring", "interviews", "rubric"],
+      "updatedAt": "2026-05-08T12:00:00.000Z",
+      "readTimeMinutes": 6,
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "title": "Remote Work Policy",
+      "summary": "Expectations for remote collaboration, availability, documentation, and team ceremonies.",
+      "content": "Remote work depends on predictable communication and clear written context. Teams should document decisions where people can find them later, keep calendars current, and make meetings optional when async updates are enough. Managers are responsible for making collaboration expectations explicit for their teams.",
+      "type": "policy",
+      "category": "people",
+      "status": "verified",
+      "owner": "People Operations",
+      "tags": ["remote-work", "collaboration", "policy"],
+      "updatedAt": "2026-01-30T10:15:00.000Z",
+      "readTimeMinutes": 4,
+      "isFavorite": false
+    },
+    {
+      "id": "9",
+      "title": "Vendor Access Runbook",
+      "summary": "Process for requesting, approving, reviewing, and removing vendor access.",
+      "content": "Vendor access starts with a business owner, a named vendor contact, and a clear scope of work. Access must be time-boxed when possible and reviewed before renewal. When a contract ends, the owner must confirm access removal from primary systems, shared drives, and communication tools.",
+      "type": "runbook",
+      "category": "operations",
+      "status": "needs-review",
+      "owner": "Operations Team",
+      "tags": ["vendors", "access", "review"],
+      "updatedAt": "2026-02-14T15:35:00.000Z",
+      "readTimeMinutes": 5,
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "title": "Quarterly Planning Notes",
+      "summary": "Archived planning notes that explain a previous quarter's goals and tradeoffs.",
+      "content": "These notes summarize the planning decisions from a previous quarter. They are kept for historical context and should not be treated as active guidance. Use them when a team needs to understand why a project was deferred, how priorities were framed, or which dependencies shaped the roadmap.",
+      "type": "decision",
+      "category": "operations",
+      "status": "archived",
+      "owner": "Strategy Team",
+      "tags": ["planning", "roadmap", "archive"],
+      "updatedAt": "2025-12-19T19:10:00.000Z",
+      "readTimeMinutes": 11,
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "title": "Design System Usage Guide",
+      "summary": "Guidance for using shared components, layout patterns, and accessibility defaults.",
+      "content": "Start with shared components before creating local UI primitives. Prefer semantic HTML, visible focus states, and predictable layout constraints. When a component does not fit the product need, document the gap before building a new variant so the design system can evolve intentionally.",
+      "type": "guide",
+      "category": "product",
+      "status": "verified",
+      "owner": "Design Systems",
+      "tags": ["design-system", "accessibility", "components"],
+      "updatedAt": "2026-06-05T08:25:00.000Z",
+      "readTimeMinutes": 7,
+      "isFavorite": true
+    },
+    {
+      "id": "12",
+      "title": "Secrets Rotation Runbook",
+      "summary": "Operational checklist for rotating secrets without customer-visible downtime.",
+      "content": "Secret rotation should happen through a planned sequence: create the new secret, deploy support for both old and new values, update dependent services, monitor failures, and remove the old value. For high-risk systems, rotate during staffed hours and keep rollback instructions ready before the first change.",
+      "type": "runbook",
+      "category": "security",
+      "status": "verified",
+      "owner": "Infrastructure Team",
+      "tags": ["secrets", "operations", "security"],
+      "updatedAt": "2026-05-16T17:50:00.000Z",
+      "readTimeMinutes": 8,
+      "isFavorite": false
+    }
+  ]
+}
