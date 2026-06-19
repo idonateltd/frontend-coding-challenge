@@ -8,17 +8,26 @@ import {
 	Label,
 	ScrollShadow,
 } from "@heroui/react";
+import type { Route } from "next";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { Group, Panel, Separator } from "react-resizable-panels";
 
+interface MenuItem {
+	href: Route;
+	label: string;
+}
+
 const MENU_SECTIONS = [
 	{
 		label: "Menu",
-		items: [{ href: "/", label: "Home" }],
+		items: [
+			{ href: "/", label: "Home" },
+			{ href: "/documents", label: "Documents" },
+		],
 	},
-] as const;
+] satisfies { items: MenuItem[]; label: string }[];
 
 interface AppShellProps {
 	children: ReactNode;

@@ -6,7 +6,7 @@ The project is already configured with Next.js, React, TypeScript, Tailwind, Her
 
 ## The Challenge
 
-Implement the main Knowledge Hub page.
+Implement the main Knowledge Hub experience.
 
 The user should be able to:
 
@@ -20,6 +20,8 @@ The user should be able to:
 - Clearly understand when the application is loading, has no results, or has an error.
 
 You do not need to implement authentication, permissions, file uploads, a rich text editor, comments, version history, or a real backend.
+
+The starter includes a basic application shell, document routes, placeholder document UI, filter controls, pagination controls, and small state helpers. These are starting points only; the product behavior still needs to be implemented.
 
 ## What We Will Evaluate
 
@@ -56,6 +58,8 @@ server/db.seed.json
 ```
 
 Use these files to understand the available resources, fields, and relationships.
+
+The project also includes shared document schemas in `server/schemas.ts` and an Axios client in `src/lib/api.ts`.
 
 Check the JSON Server documentation to understand how to query, filter, create, and update records:
 
